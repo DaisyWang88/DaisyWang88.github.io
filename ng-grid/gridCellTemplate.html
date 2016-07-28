@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>基于字符串的 cell 表格数据单元选中 给与不同的格式，如年纪大于20的变为绿色</title>
+    <link rel="stylesheet" type="text/css" href="ng-grid.css">
+    <style>
+    .gridStyle {
+        border: 1px, solid rgb(212, 212, 212);
+        width: 400px;
+        height: 300px;
+    }
+
+    .green {
+        background-color: green;
+        color: while;
+    }
+    </style>
+</head>
+
+<body ng-controller='MyCtrl'>
+    <div class="gridStyle" ng-grid='gridOptions'></div>
+    <script src="jquery.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="ng-grid-2.0.14.debug.js"></script>
+    <script>
+    var app = angular.module('myApp', ['ngGrid']);
+    app.controller('MyCtrl', function($scope) {
+        $scope.myData = [{
+            name: 'Moronio',
+            age: 50
+        }, {
+            name: 'Tiancum',
+            age: 43
+        }, {
+            name: 'Enos',
+            age: 45
+        }, {
+            name: 'Daisy',
+            age: 34
+        }];
+        $scope.gridOptions = {
+            data: 'myData',
+            // columnDefs: [{
+            //     field: 'name',
+            //     displayName: 'Name'
+            // }, {
+            //     field: 'age',
+            //     displayName: 'Age',
+            //     // cellTemplate: '<div ng-class="{green: row.getProperty(col.field) > 30}"><div class="ngCellText">{{row.getProperty(col.field)}}</div></div>'
+            //     // cellTemplate:'cellTemplate.html'
+
+            // }]
+            rowTemplate: '<div style="height:100%" ng-class="{green:row.getProperty(\'age\')<30}"><div ng-style="{ \'cursor\': row.cursor }" ng-repeat="col in renderedColumns" ng-class="col.colIndex()" class="ngCell ">' +
+                           '<div class="ngVerticalBar" ng-style="{height: rowHeight}" ng-class="{ ngVerticalBarVisible: !$last }"> </div>' +
+                           '<div ng-cell></div>' +
+                     '</div></div>'
+        };
+
+    });
+    </script>
+</body>
+
+</html>

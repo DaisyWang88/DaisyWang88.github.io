@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>shopping Cart</title>
+    <script src="angular.js"></script>
+
+</head>
+
+<body ng-controller="CartController">
+    <h1>Your Order</h1>
+
+    <div ng-repeat="item in items">
+        <span ng-bind="item.title">&nbsp;&nbsp;这里写什么都不会显示了</span>
+        <input  ng-model='item.quantity'></input>
+        <span>{{item.price|currency}}</span>
+        <span>{{item.price*item.quantity |currency}}</span>
+        <button ng-click="remove($index)">Remove</button>
+    </div>
+    <script src='angular.js'></script>
+    <script>
+     angular.module('myApp',[]).controller('CartController',function ($scope){
+            $scope.items = [
+                {title:'Paint pots',quantity:8,price:3.95},
+                {title:'Polka dots',qunantity:17,price:12.95},
+                {title:'pebbles',quantity:5,price:6.95}
+            ];
+            $scope.remove = function (index){
+
+                $scope.items.splice(index,1);
+            };
+
+
+     });
+    </script>
+</body>
+
+</html>

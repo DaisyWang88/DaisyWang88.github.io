@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo2 HTML 拖拽 投进ng-grid</title>
+    <link rel="stylesheet" href="ng-grid.css">
+    <style>
+    .gridStyle {
+        border: 1px, solid, rgb(212, 212, 212);
+        width: 500px;
+        height: 300px;
+    }
+    </style>
+</head>
+
+<body ng-controller='controller'>
+    <div class='gridStyle' ng-grid='gridOptions'></div>
+    <script src="jquery.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="ng-grid-2.0.14.debug.js"></script>
+    <script>
+    var app = angular.module('myApp', ['ngGrid']);
+    app.controller('controller', function ($scope) {
+        $scope.myData = [{
+            name: 'Moronio',
+            age: 45
+        }, {
+            name: 'Tiancum',
+            age: 43
+        }, {
+            name: 'Enos',
+            age: 45
+        }, {
+            name: 'Daisy',
+            age: 34
+        }];
+        $scope.gridOptions = {
+            data: 'myData',
+            showGroupPanel: true
+        };
+
+
+
+
+
+    });
+    </script>
+</body>
+
+</html>
