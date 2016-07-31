@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flyBird</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .background{
+            background-image:url('../imgs/a_background_top.png');
+            height:645px;
+        }
+        img{
+            position:relative;
+            float:right;
+            top:200px;
+            display:none;
+            -webkit-transition: transform 6s linear;
+        }
+        .action1{
+            display:block;
+        }
+        .action2{
+            display:block;
+            -webkit-transform: translate(-780px,40px);
+        }
+        .action3{
+            display:block;
+            -webkit-transform: translate(-1180px,-160px) scale(0.5,0.5) ;
+        }
+        .action4{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class='background'>
+        <img src="../imgs/bird1.png" alt="bird">
+    </div>
+</body>
+<script>
+        var bird = document.getElementsByTagName('img')[0];
+        setTimeout(function (){
+            bird.className = 'action1';
+        },200);
+        setTimeout(function(){
+            bird.className = 'action2';
+        },250);
+        setTimeout(function(){
+            bird.className = 'action3';
+        },6800);
+        setTimeout(function(){
+            bird.className = 'action4';
+        },12850);
+    </script>
+</html>

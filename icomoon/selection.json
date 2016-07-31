@@ -1,0 +1,98 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M192 512c0 176.731 143.269 320 320 320s320-143.269 320-320c0-176.731-143.269-320-320-320s-320 143.269-320 320z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "circle"
+        ],
+        "grid": 0
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 74,
+        "id": 0,
+        "name": "circle",
+        "prevSize": 32,
+        "code": 59649
+      },
+      "setIdx": 0,
+      "setId": 18,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M750.72 499.072c-1.696-4.224-4.224-8.192-7.616-11.616l-413.376-413.312c-13.504-13.536-35.36-13.536-48.896 0-13.44 13.472-13.44 35.328 0 48.832l389.088 389.056-389.024 388.96c-13.472 13.568-13.472 35.36 0 48.864 13.536 13.504 35.36 13.504 48.864 0l413.344-413.344c10.144-10.112 12.672-24.96 7.616-37.44z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "colorPermutations": {
+          "108131216112012012012552552551": []
+        },
+        "tags": [
+          "angle-right"
+        ],
+        "grid": 0
+      },
+      "attrs": [],
+      "properties": {
+        "order": 75,
+        "id": 1,
+        "prevSize": 32,
+        "code": 59648,
+        "name": "angle-right"
+      },
+      "setIdx": 0,
+      "setId": 18,
+      "iconIdx": 1
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16
+    },
+    "historySize": 100,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

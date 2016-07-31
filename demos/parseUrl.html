@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解析url</title>
+</head>
+<body>
+
+</body>
+<script>
+    var url = 'https://www.baidu.com/?name=%E8%B7%9F%E8%B0%81%E5%AD%A6&age=2#section=1';
+    parse(url);
+    function parse(url) {
+        var str = url.split('?')[1];
+        var paramStr = str.split('#');
+        var obj = {};
+        var params = paramStr[0].split('&');
+        for (var i = 0; i < params.length; i++) {
+            if (params[i]) {
+                var param = params[i].split('=');
+                obj[param[0]] = decodeURI(param[1]);
+            }
+        }
+        if (paramStr[1]) {
+            var param = paramStr[1].split('=');
+            obj[param[0]] = decodeURI(param[1]);
+        }
+        var json = JSON.stringify(obj);
+        alert(json);
+    }
+
+</script>
+</html>
+
+
+

@@ -3,34 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>DaisyWang</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        nav {
+            background-color: rgb(250, 228, 208);
+            padding: 10px 30px;
+            height: 60px;
+            border-bottom: 1px solid rgb(209, 209, 209);
+        }
+        iframe {
+            width:100%;
+            height: 500px;
+        }
+        .img {
+            width:30%;
+            float:left;
+            text-align:center;
+        }
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 45px;
+        }
+        nav ul {
+            overflow:hidden;
+            list-style: none;
+            margin-top: 20px;
+            padding:3px;
+        }
+        nav li {
+            float:left;
+            margin: 0 50px;
+        }
+        nav li a {
+            text-decoration: none;
+            color: rgb(32, 36, 46);
+        }
+        footer {
+            width:100%;
+            text-align: center;
+            border-top: 1px solid rgb(209, 209, 209);
+            position: fixed;
+            bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-    <nav>demo展示</nav>
+    <nav>
+        <div class="img"><a href="https://github.com/DaisyWang88" target="_blank"><img src="imgs/logo.jpeg" alt="傲娇宝宝" style="cursor:pointer;"></a></div>
+        <ul>
+            <li><a href="demos/tpl.html" target="iframe" style="cursor:pointer;">DEMOS</a></li>
+            <li><a href="projects.html" target="iframe" style="cursor:pointer;">项目简介</a></li>
+            <li><a href="http://www.cnblogs.com/DaisyWang/" target="_blank" style="cursor:pointer;">BLOG</a></li>
+        </ul>
+    </nav>
     <div class="content">
-    <ul>
-        <li>
-            <a href="accordion.html">手风琴效果</a>
-        </li>
-        <li>
-            <ul>
-                <li>
-                    <a href="ng-grid/demo1.html">AngularJS之ng-grid——Basic Example</a>
-                </li>
-                <li>
-                    <a href="ng-grid/demo2.html">AngularJS之ng-grid——showGroupPane</a>
-                </li>
-                <li>
-                    <a href="ng-grid/demo3.html">AngularJS之ng-grid——jqueryUIDraggable</a>
-                </li>
-            </ul>
-
-        </li>
-
-        <li>
-            <a href="shoppingCart/shoppingCart.html">AngularJS之ng-model数据的双向绑定</a>
-        </li>
-    </ul>
+        <iframe name="iframe" src="slideImg/tpl.html" frameborder="0"></iframe>
     </div>
+
     <footer>&copy;DaisyWang</footer>
 
 </body>
